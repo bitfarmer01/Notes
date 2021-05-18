@@ -1,0 +1,29 @@
+.container {
+  max-width: 60rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.note {
+  background-color: #fef68a;
+  padding: 1rem;
+  margin-bottom: 0.625rem;
+  border-radius: 1rem;
+  min-height: 10rem;
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.notes-list {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+}
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
