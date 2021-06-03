@@ -1,24 +1,19 @@
 import React from "react";
-import deleteIcon from "./deleteIcon.svg";
+import deleteIcon from "./deleteIcon1.svg";
 
-const today = new Date();
-const dd = today.getDate();
-const mm = today.getMonth();
-const yy = today.getFullYear();
-const Note = () => {
+const Note = ({ id, text, date, handleDeleteNote }) => {
+  const handleClick = () => handleDeleteNote(id);
   return (
     <div className="note">
-      <span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </span>
+      <span>{text}</span>
       <div className="note-footer">
-        <small>{`${dd}/${mm}/${yy}`}</small>
+        <small>{date}</small>
         <img
           src={deleteIcon}
           className="delete-icon"
           alt="delete icon "
           height="25rem"
+          onClick={handleClick}
         />
       </div>
     </div>
